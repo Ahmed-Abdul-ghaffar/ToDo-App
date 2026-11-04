@@ -15,6 +15,8 @@ import {
 export const applyTheme = (isDark) => {
   document.documentElement.classList.toggle("dark", isDark);
 };
+import checkIcon from "./images/icon-check.svg";
+import crossIcon from "./images/icon-cross.svg";
 
 export const toggleDarkMode = () => {
   const isDark = !document.documentElement.classList.contains("dark");
@@ -30,7 +32,7 @@ export const renderTaskList = (tasks) => {
             <button class="todo-list__check-btn" aria-label="mark as complete">
               <img
                 class="todo-list__check-icon"
-                src="images/icon-check.svg"
+                src="${checkIcon}"
                 alt=""
               />
             </button>
@@ -38,7 +40,7 @@ export const renderTaskList = (tasks) => {
             <button class="todo-list__delete-btn" aria-label="delete task">
               <img
                 class="todo-list__delete-icon"
-                src="images/icon-cross.svg"
+                src="${crossIcon}"
                 alt=""
               />
             </button>

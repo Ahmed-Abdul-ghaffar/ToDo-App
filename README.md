@@ -49,8 +49,8 @@ Todos and the chosen theme are saved in `localStorage`, so they are still there 
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://github.com/Ahmed-Abdul-ghaffar/ToDo-App](https://github.com/Ahmed-Abdul-ghaffar/ToDo-App)
+- Live Site URL: [https://ahmed-abdul-ghaffar.github.io/ToDo-App/](https://ahmed-abdul-ghaffar.github.io/ToDo-App/)
 
 ## My process
 

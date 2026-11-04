@@ -8,13 +8,16 @@
   "main": "index.js",
   "scripts": {
     "start": "vite",
-    "build": "build vite"
+    "build": "vite build",
+    "preview": "vite preview",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "sortablejs": "^1.15.7",
     "vite": "^8.3.2"
   },
   "devDependencies": {
+    "gh-pages": "^6.3.0",
     "sass": "^1.105.2"
   }
 }
