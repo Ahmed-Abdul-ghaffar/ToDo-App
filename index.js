@@ -182,5 +182,4 @@ document.addEventListener("DOMContentLoaded", () => {
   tasks = getData("tasks") ?? [];
   initTaskList(tasks);
 });
-
 initListeners();

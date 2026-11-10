@@ -1,0 +1,145 @@
+.todo-list {
+  box-shadow: 0 -0.1rem 1rem var(--color-list-shadow);
+  border-radius: 0.2rem;
+
+  &__item {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    width: 100%;
+    border-bottom: solid 0.1rem var(--color-borders);
+    padding: 1.2rem var(--check-box-left-space);
+    background-color: var(--color-list-bg);
+
+    &:first-child {
+      border-top-left-radius: 0.2rem;
+      border-top-right-radius: 0.2rem;
+    }
+
+    &:hover,
+    &:has(:focus-visible) {
+      cursor: pointer;
+      .todo-list__delete-btn {
+        opacity: 1;
+      }
+    }
+
+    &--completed {
+      .todo-list__check-btn {
+        &:hover {
+          &::after {
+            opacity: 0;
+          }
+
+          &::before {
+            opacity: 1;
+          }
+        }
+
+        &::before {
+          opacity: 1;
+        }
+
+        .todo-list__check-icon {
+          opacity: 1;
+        }
+      }
+
+      .todo-list__task {
+        text-decoration: line-through;
+        color: var(--color-completed-task);
+      }
+    }
+
+    &--ghost {
+      opacity: 0.5;
+      outline: 2px dashed var(--color-blue-500);
+      outline-offset: -2px;
+    }
+  }
+
+  &__check-btn {
+    position: relative;
+    margin-right: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0.1rem solid var(--color-borders);
+    border-radius: 50%;
+    width: 1.5rem;
+    height: 1.5rem;
+    padding: 0.1rem;
+    background-color: transparent;
+    z-index: 0;
+
+    &::before {
+      opacity: 0;
+      transition: opacity var(--transtion-time);
+      content: "";
+      position: absolute;
+      inset: -0.1rem;
+      border-radius: 50%;
+      background: linear-gradient(
+        135deg,
+        var(--color-cyan),
+        var(--color-magenta)
+      );
+      z-index: -1;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      border-radius: 50%;
+      background-color: var(--color-list-bg);
+      inset: 0;
+      opacity: 0;
+      transition: opacity var(--transtion-time);
+      z-index: -1;
+    }
+
+    @media (hover: hover) {
+      &:hover {
+        border-color: transparent;
+        background-color: var(--color-list-bg);
+
+        &::before,
+        &::after {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  &__check-icon {
+    opacity: 0;
+    transition: opacity var(--transtion-time);
+  }
+
+  &__task {
+    font-size: var(--font-size-default);
+    color: var(--color-tasks);
+  }
+
+  &__delete-btn {
+    opacity: 0;
+    transition: opacity var(--transtion-time);
+  }
+}
+
+@media (hover: none) {
+  .todo-list {
+    &__item {
+      padding: 0.8rem 1.1rem;
+    }
+
+    &__check-btn {
+      width: 1.2rem;
+      height: 1.2rem;
+    }
+
+    &__delete-btn {
+      opacity: 1;
+    }
+  }
+}

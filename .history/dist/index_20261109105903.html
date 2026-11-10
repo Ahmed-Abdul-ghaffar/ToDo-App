@@ -1,0 +1,95 @@
+<!doctype html>
+<html class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="HTML, CSS, JS, todo app, frontend" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+      rel="stylesheet"
+      pm
+    />
+    <link rel="icon" href="/ToDo-App/assets/favicon-32x32-DQjEQYWa.png" />
+
+    <title>Frontend Mentor | ToDo App</title>
+    <script
+      type="module"
+      crossorigin
+      src="/ToDo-App/assets/index-BMt9CNWS.js"
+    ></script>
+    <link
+      rel="stylesheet"
+      crossorigin
+      href="/ToDo-App/assets/index-BPze7sNG.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <h1 class="header__logo">TODO</h1>
+
+        <button
+          class="header__theme-icon header__theme-icon-moon"
+          aria-label="dark theme icon"
+        >
+          <img
+            src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20width='26'%20height='26'%3e%3cpath%20fill='%23FFF'%20fill-rule='evenodd'%20d='M13%200c.81%200%201.603.074%202.373.216C10.593%201.199%207%205.43%207%2010.5%207%2016.299%2011.701%2021%2017.5%2021c2.996%200%205.7-1.255%207.613-3.268C23.22%2022.572%2018.51%2026%2013%2026%205.82%2026%200%2020.18%200%2013S5.82%200%2013%200z'/%3e%3c/svg%3e"
+            alt=""
+          />
+        </button>
+        <button
+          class="header__theme-icon header__theme-icon-sun"
+          aria-label="light theme icon"
+        >
+          <img
+            src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20width='26'%20height='26'%3e%3cpath%20fill='%23FFF'%20fill-rule='evenodd'%20d='M13%2021a1%201%200%20011%201v3a1%201%200%2011-2%200v-3a1%201%200%20011-1zm-5.657-2.343a1%201%200%20010%201.414l-2.121%202.121a1%201%200%2001-1.414-1.414l2.12-2.121a1%201%200%20011.415%200zm12.728%200l2.121%202.121a1%201%200%2001-1.414%201.414l-2.121-2.12a1%201%200%20011.414-1.415zM13%208a5%205%200%20110%2010%205%205%200%20010-10zm12%204a1%201%200%20110%202h-3a1%201%200%20110-2h3zM4%2012a1%201%200%20110%202H1a1%201%200%20110-2h3zm18.192-8.192a1%201%200%20010%201.414l-2.12%202.121a1%201%200%2001-1.415-1.414l2.121-2.121a1%201%200%20011.414%200zm-16.97%200l2.121%202.12A1%201%200%20015.93%207.344L3.808%205.222a1%201%200%20011.414-1.414zM13%200a1%201%200%20011%201v3a1%201%200%2011-2%200V1a1%201%200%20011-1z'/%3e%3c/svg%3e"
+            alt=""
+          />
+        </button>
+      </header>
+
+      <main>
+        <form class="form">
+          <label for="task" class="form__label">New ToDo</label>
+          <input
+            type="text"
+            id="task"
+            name="task"
+            placeholder=" Create a new todo..."
+            class="form__input"
+          />
+        </form>
+
+        <ol class="todo-list"></ol>
+
+        <div class="list-options">
+          <div class="list-options__summary">
+            <p><span class="list-options__items-left">#</span> items left</p>
+
+            <button class="list-options__clear-completed-btn">
+              Clear Completed
+            </button>
+          </div>
+
+          <div class="list-options__filter-btns">
+            <button
+              class="list-options__filter-btn list-options__filter-btn--active all-filter"
+            >
+              All
+            </button>
+            <button class="list-options__filter-btn active-filter">
+              Active
+            </button>
+            <button class="list-options__filter-btn completed-filter">
+              Completed
+            </button>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">Drag and drop to reorder list</footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,80 @@
+<!doctype html>
+<html class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="HTML, CSS, JS, todo app, frontend" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+      rel="stylesheet"
+      pm
+    />
+    <link rel="icon" href="images/favicon-32x32.png" />
+    <link rel="stylesheet" href="styles.scss" />
+    <title>Frontend Mentor | ToDo App</title>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <h1 class="header__logo">TODO</h1>
+
+        <button
+          class="header__theme-icon header__theme-icon-moon"
+          aria-label="dark theme icon"
+        >
+          <img src="images/icon-moon.svg" alt="" />
+        </button>
+        <button
+          class="header__theme-icon header__theme-icon-sun"
+          aria-label="light theme icon"
+        >
+          <img src="images/icon-sun.svg" alt="" />
+        </button>
+      </header>
+
+      <main>
+        <form class="form">
+          <label for="task" class="form__label">New ToDo</label>
+          <input
+            type="text"
+            id="task"
+            name="task"
+            placeholder=" Create a new todo..."
+            class="form__input"
+          />
+        </form>
+
+        <ol class="todo-list"></ol>
+
+        <div class="list-options">
+          <div class="list-options__summary">
+            <p><span class="list-options__items-left">#</span> items left</p>
+
+            <button class="list-options__clear-completed-btn">
+              Clear Completed
+            </button>
+          </div>
+
+          <div class="list-options__filter-btns">
+            <button
+              class="list-options__filter-btn list-options__filter-btn--active all-filter"
+            >
+              All
+            </button>
+            <button class="list-options__filter-btn active-filter">
+              Active
+            </button>
+            <button class="list-options__filter-btn completed-filter">
+              Completed
+            </button>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">Drag and drop to reorder list</footer>
+    </div>
+    <script type="module" src="./index.js"></script>
+  </body>
+</html>

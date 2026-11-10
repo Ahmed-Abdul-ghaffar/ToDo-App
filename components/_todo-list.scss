@@ -8,7 +8,7 @@
     align-items: center;
     width: 100%;
     border-bottom: solid 0.1rem var(--color-borders);
-    padding: 1.2rem 1.6rem;
+    padding: 1.2rem var(--check-box-left-space);
     background-color: var(--color-list-bg);
 
     &:first-child {
@@ -130,7 +130,7 @@
 @media (hover: none) {
   .todo-list {
     &__item {
-      padding: 0.8rem 1.1rem;
+      padding: 0.8rem var(--check-box-left-space);
     }
 
     &__check-btn {

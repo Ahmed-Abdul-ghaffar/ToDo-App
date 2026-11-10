@@ -1,0 +1,97 @@
+body {
+  font-size: 18px;
+  font-family: var(--font-family-josefin);
+}
+
+:root {
+  // ------ row color pallete --------
+  --color-blue-500: hsl(220, 98%, 61%);
+  --color-cyan: #57ddff;
+  --color-magenta: #c058f3;
+
+  // light theme
+  --color-gray-50: hsl(0, 0%, 98%);
+  --color-purple-300: hsl(234, 39%, 85%);
+  --color-gray-300: hsl(233, 11%, 84%);
+  --color-gray-600: hsl(236, 9%, 61%);
+  --color-navy-850: hsl(235, 19%, 35%);
+
+  // dark theme
+  --color-navy-950: hsl(235, 21%, 11%);
+  --color-navy-900: hsl(235, 24%, 19%);
+  --color-purple-300: hsl(234, 39%, 85%);
+  --color-purple-100: hsl(236, 33%, 92%);
+  --color-purple-600: hsl(235, 16%, 43%);
+  --color-purple-700: hsl(233, 14%, 35%);
+  --color-purple-800: hsl(237, 14%, 26%);
+  --color-gray-600: hsl(236, 9%, 61%);
+
+  // fonts
+  --font-size-default: 1.1rem;
+  --font-size-logo: 1.9rem;
+  --font-size-filter: 0.8rem;
+  --font-weight-regular: 400;
+  --font-weight-bold: 700;
+  --font-family-josefin: "Josefin Sans", sans-serif;
+
+  // --------- role based colors (light default) ----------
+  --color-bg: var(--color-gray-300);
+  --color-list-bg: var(--color-gray-50);
+  --color-list-shadow: var(--color-gray-600);
+  --color-tasks: var(--color-navy-850);
+  --color-filters: var(--color-gray-600);
+  --color-footer: var(--color-gray-600);
+  --color-placeholder: var(--color-gray-600);
+  --color-completed-task: var(--color-gray-300);
+  --color-borders: var(--color-gray-300);
+  --color-logo: var(--color-gray-50);
+  --color-filter-active: var(--color-blue-500);
+  --color-input-focus: var(--color-navy-850);
+  --color-filters-hover: var(--color-navy-850);
+  --color-checkbox-checked: linear-gradient(
+    135deg,
+    var(--color-cyan),
+    var(--color-magenta)
+  );
+  --color-checkbox-border-hover: linear-gradient(
+    135deg,
+    var(--color-cyan),
+    var(--color-magenta)
+  );
+
+  //   spacing
+  --gutter: 1.6rem;
+  --padding-default: 1.5rem;
+  --transtion-time: 0.2s;
+  --check-box-left-space: 1.6rem;
+}
+
+html.dark {
+  --color-bg: var(--color-navy-950);
+  --color-list-bg: var(--color-navy-900);
+  --color-list-shadow: var(--color-navy-950);
+  --color-tasks: var(--color-purple-300);
+  --color-input-focus: var(--color-purple-300);
+  --color-filters-hover: var(--color-purple-100);
+  --color-borders: var(--color-purple-800);
+  --color-completed-task: var(--color-purple-700);
+
+  body::after {
+    background-image: url(../images/bg-desktop-dark.jpg);
+  }
+
+  .header__theme-icon-moon {
+    display: none;
+  }
+
+  .header__theme-icon-sun {
+    display: block;
+  }
+}
+
+@media (max-width: 400px) {
+  :root {
+    --font-size-default: 0.7rem;
+    --check-box-left-space: 1.1rem;
+  }
+}

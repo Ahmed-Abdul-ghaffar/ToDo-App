@@ -63,6 +63,7 @@ body {
   --gutter: 1.6rem;
   --padding-default: 1.5rem;
   --transtion-time: 0.2s;
+  --check-box-left-space: 1.6rem;
 }
 
 html.dark {
@@ -91,5 +92,6 @@ html.dark {
 @media (max-width: 400px) {
   :root {
     --font-size-default: 0.7rem;
+    --check-box-left-space: 1.1rem;
   }
 }
